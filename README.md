@@ -4,7 +4,7 @@
 
 This package is designed to re-create the so-called climate stripes (originally created by [Ed Hawkins at the University of Reading](https://showyourstripes.info/)). This code is part of a class assignment for ATMS 597 (Spring 2020) at the University of Illinois at Urbana Champaign. Use this class function to download daily temperature data from Global Historical Climate Network (GHCN) datasets hosted by the National Centers for Environmental Information (NCEI), and plot the anomalies as climate stripes according to the time duration and sampling interval desired by the user. The code also plots the mean values as a separate line plot, overlayed on the stripes.
 
-The source code can be found in ATMS-597-SP-2020-Project-2-Group-D (Current Directory)/scripts/
+The source code is in .py format and can be found in ATMS-597-SP-2020-Project-2-Group-D (Current Directory)/scripts/
 
 ## Dependencies
 Required packages
