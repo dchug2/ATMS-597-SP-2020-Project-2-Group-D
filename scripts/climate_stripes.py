@@ -304,6 +304,5 @@ class climate_stripes:
           ax2.plot(range(0, len(new_DF.index)), new_DF['average'], color = 'xkcd:chartreuse', linestyle = '--', marker = 's')
           ax2.set_ylabel('Temperature ($^{o}C$)', fontsize=14)
         # save figure at user defined location
-        plt.tight_layout()
         plt.savefig(filepath, bbox_inches = "tight")
         plt.show()
