@@ -36,7 +36,7 @@ stripes.plot('Y')
 
 [Full Example Notebook](https://drive.google.com/file/d/16vuX8mSn_IiObgrjCsEIZaEK6tqiHaq8/view?usp=sharing)
 
-## Primary Developers:
+## Project Team:
 - Divyansh Chug
 - Dongwei Fu
 - Puja Roy
