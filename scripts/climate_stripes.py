@@ -233,7 +233,7 @@ class climate_stripes:
         DF['anom'] = DF['average'].groupby(DF.index.dayofyear).transform(lambda x: (x - x.mean()))
         return DF
             
-    def plot(self, frequency = 'Y', path = 'stripes.png', lineplot = True):
+    def plot(self, frequency = 'Y', filepath = 'stripes.png', lineplot = True):
         """Plot resampled means and anomalies to re-create climate stripes 
 
         **Arguments**
@@ -304,5 +304,6 @@ class climate_stripes:
           ax2.plot(range(0, len(new_DF.index)), new_DF['average'], color = 'xkcd:chartreuse', linestyle = '--', marker = 's')
           ax2.set_ylabel('Temperature ($^{o}C$)', fontsize=14)
         # save figure at user defined location
-        plt.savefig(filepath)
+        plt.tight_layout()
+        plt.savefig(filepath, bbox_inches = "tight")
         plt.show()
