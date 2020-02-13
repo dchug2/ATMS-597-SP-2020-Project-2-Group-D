@@ -1,5 +1,5 @@
 """Visualizing climate stripes, first created by Ed Hawkins"""
-# This code is part of a class assignment for ATMS 597, Spring 2020, Glob
+# This code is part of a class assignment for ATMS 597, Spring 2020,
 # at the University of Illinois at Urbana Champaign. Use this
 # class function to download daily temperature data from Global
 # Historical Climate Network (GHCN) datasets hosted by the National
@@ -7,6 +7,9 @@
 # stripes according to the time duration and sampling interval
 # desired by the user. The code also plots the mean values as a
 # separate line plot, overlayed on the stripes.
+
+# Created by Divyansh Chug, Dongwei Fu and Puja Roy
+
 
 # needed to make web requests
 import requests
@@ -76,11 +79,24 @@ class climate_stripes:
         self.data = self._makeanomaly()
 
     def _data(self):
-        """Send data request to NCEI server and download/process data into pandas
-           dataframe
+        """Send data request to NCEI server and download/process data
+           into pandas dataframe
 
         **Returns**
         pandas dataframe
+
+        Note: Adapted from 'https://towardsdatascience.com/
+        getting-weather-data-in-3-easy-steps-8dc10cc5c859'
+        and Steve‘s 'ncei_api_example.py'
+
+        Data reference:
+        Menne, M.J., I. Durre, B. Korzeniewski, S. McNeal, K. Thomas,
+        X. Yin, S. Anthony, R. Ray, R.S. Vose, B.E.Gleason,
+        and T.G. Houston, 2012:
+        Global Historical Climatology Network - Daily (GHCN-Daily),
+        Version 3. NOAA National Climatic Data Center.
+        http://doi.org/10.7289/V5D21VHZ Feb.13, 2020.
+
         """
         # initialize lists to store data
         dates_mintemp = []
@@ -347,7 +363,8 @@ class climate_stripes:
         return newdf_all
 
     def _makeanomaly(self):
-        """Compute resampled means and anomalies to pass on to the plotting code
+        """Compute resampled means and anomalies to pass on to the
+           plotting code
 
         **Returns**
         pandas dataframe
