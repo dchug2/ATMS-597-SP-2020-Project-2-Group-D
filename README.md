@@ -32,8 +32,11 @@ from scripts.climate_stripes import climate_stripes
 # Input GHCN station ID, dates and NCEI token to create a class object 
 stripes = climate_stripes(station_id, "1950-01-01", "2015-12-31", Token)
 
-# Plot at desired frequency and save figure 
-stripes.plot('Y')
+# Plot at desired frequency (Y,M or W) without line plot and save figure  
+stripes.plot('Y','Yearly_Stripes',lineplot = False)
+
+# Call the plot method to plot 100-day stripes with line plot, without saving the figure
+stripes.plot(100, '', lineplot = True)
 ```
 
 [Full Example Notebook](https://drive.google.com/file/d/16vuX8mSn_IiObgrjCsEIZaEK6tqiHaq8/view?usp=sharing)
